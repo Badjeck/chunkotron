@@ -1,0 +1,70 @@
+version: '3'
+
+services:
+
+  mysql-bdd1:
+    image: mysql:latest
+    volumes: 
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: bdChunk
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3308:3306"
+
+  mysql-bdd2:
+    image: mysql:latest
+    volumes: 
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: bdChunk
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3309:3306"
+
+  mysql-bdd3:
+    image: mysql:latest
+    volumes: 
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: bdChunk
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3310:3306"
+
+  mysql-bdd4:
+    image: mysql:latest
+    volumes: 
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: bdChunk
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3311:3306"
+
+  mysql-bdd5:
+    image: mysql:latest
+    volumes: 
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: bdChunk
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3312:3306"
+
+  
+  adminer:
+        image: adminer
+        restart: always
+        ports: 
+            - 8080:8080
